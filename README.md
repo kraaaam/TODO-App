@@ -8,13 +8,21 @@ This project was containerized using Docker. You need to install [Docker](https:
 
 ## How to run
 1. Build your project
-```docker-compose build```
+```
+docker-compose build
+```
 
 2. Run your project
-```docker-compose up```
+```
+docker-compose up
+```
 
 3. Check running containers
-```docker ps```
+```
+docker ps
+```
 
 4. Check logs
-```docker logs -f --tail 100 todo_web_1```
+```
+docker logs -f --tail 100 todo_web_1
+```
