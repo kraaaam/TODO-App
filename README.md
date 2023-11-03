@@ -17,9 +17,9 @@ docker-compose build
 docker-compose up
 ```
 
-3. Stop your project
+3. Database Migration
 ```
-docker-compose stop
+docker exec -ti todo_web_1 python manage.py migrate
 ```
 
 4. Check running containers
@@ -30,4 +30,9 @@ docker ps
 5. Check logs
 ```
 docker logs -f --tail 100 todo_web_1
+```
+
+6. Stop your project
+```
+docker-compose stop
 ```
