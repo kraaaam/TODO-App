@@ -36,3 +36,11 @@ docker logs -f --tail 100 todo_web_1
 ```
 docker-compose stop
 ```
+
+
+### Resources
+- Python
+    - [30 days of python](https://github.com/Asabeneh/30-Days-Of-Python/tree/master)
+    - [How to get started with python](https://www.programiz.com/python-programming/first-program)
+- Django
+    - [Django ebooks](https://www.javatpoint.com/best-books-to-learn-django-for-beginners-and-advance-programmers)
