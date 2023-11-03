@@ -17,12 +17,17 @@ docker-compose build
 docker-compose up
 ```
 
-3. Check running containers
+3. Stop your project
+```
+docker-compose stop
+```
+
+4. Check running containers
 ```
 docker ps
 ```
 
-4. Check logs
+5. Check logs
 ```
 docker logs -f --tail 100 todo_web_1
 ```
