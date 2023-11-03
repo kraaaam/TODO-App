@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>TODO List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>TODO List</h1>
+    <ul>
+            {% for todo in todo_items %}
+                <li>      
+                        <form method="POST" action="{% url 'update_todo' todo.id %}">
+                                {% csrf_token %}
+                                <input type="text" required name="content_{{todo.id}}" value="{{todo.content}}">
+                                <button type="submit">Update</button>
+                                <a href="{% url 'delete_todo' todo.id %}">Delete</a>
+                        </form>
+                </li>
+
+            {%  endfor %}    
+        
+    </ul>
+    <form method="post" action="{% url 'add_todo' %}">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="New task" required>
+        <button type="submit">Add</button>               
+    </form>
+</body>
+</html>
